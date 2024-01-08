@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Crafted</title>
+  <link rel="ICON" href="img/logo.png">
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- ICON CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- aos animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Webpage Icon -->
+  <link rel="Icon" href="img/logo1.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Font Awsome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lora&family=Playfair+Display:ital,wght@0,500;1,500&family=Satisfy&display=swap"
+    rel="stylesheet">
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script src="jquery.js"></script>
+  </script>
+</head>
+<style>
+  .container-fluid {
+    margin-left: 17%;
+  }
+
+  /* 
+  .row {
+    --bs-gutter-x: 0rem;
+  } */
+
+  .dropdown-item:hover {
+    color: green;
+    position: relative;
+
+  }
+
+  .dropdown-item {
+    left: 3px;
+    transition: all .2s;
+  }
+
+
+  @media only screen and (min-width:1200px) {
+    .nav-item {
+      margin-left: 3px;
+    }
+
+    .nav-link:hover {
+      border-bottom: 3px solid rgb(13, 165, 13);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .active {
+      border-bottom: 3px solid rgb(13, 165, 13);
+      color: silver;
+    }
+  }
+
+  .nav-link {
+    transition: all 0.5s;
+    position: relative;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 143, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .cards {
+    box-shadow: 0px 0px 17px -10px rgba(0, 0, 0, 0.75);
+
+  }
+
+  .cards-wrap .card-inner .img {
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 5px;
+  }
+
+  .cards:hover {
+    cursor: pointer;
+    box-shadow: 20px 20px 100px -50px #000;
+    transition: 0.3s;
+  }
+
+  .btn-outline-success:hover {
+    color: white !important;
+  }
+</style>
+
+<body>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark  ">
+    <div class="container-fluid  ">
+      <a href="index.html" class=""><img src="img/logo.png" class="" height="70px" width="120%" alt=""></a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-3" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-5">
+          <li class="nav-item dropdown">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="index.html" id="navbarDropdownMenuLink">
+              Home
+            </a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown ms-3 fw-bold active" style="color: silver;" href="#" id="navbarDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item fw-bold" href="backlight.html">Back Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="foglight.html">Fog Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="headlight.html">Head Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="backtrunk.html">Back Trunk</a></li>
+              <li><a class="dropdown-item fw-bold" href="seat.html">Seat</a></li>
+              <li><a class="dropdown-item fw-bold" href="door.html">Door</a></li>
+              <li><a class="dropdown-item fw-bold" href="sidemirror.html"> Side Mirror</a></li>
+              <li><a class="dropdown-item fw-bold" href="tyre.html"> Tyre</a></li>
+              <li><a class="dropdown-item fw-bold" href="rim.html">Rim</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="service.html">
+              Service
+            </a>
+          </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="Gallery.html">
+              Gallery
+            </a>
+
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold " style="color: silver;" href="AboutUs.html">
+              About Us
+            </a>
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="contactus.html">
+              Contact Us
+            </a>
+
+          </li>
+
+
+          <div class="col-md- d-flex justify-content-start">
+            <div class="pt-2 pl-0 pb-0 pr-0">
+              <i class="fas fa-shopping-cart fa-1x ml-md-5" style="cursor: pointer;"></i>
+            </div>
+            <span class="badge badge-success mt-0 align-self-start" id="cart_item_count"
+              style="margin-left: -25px; margin-top: -5px;">0</span>
+          </div>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link ms-4 fw-bold" style="color: silver;" href="signup.html">
+              Sign up
+            </a>
+          </li>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--CAROUSEL video-->
+  <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active m-none">
+        <video autoplay loop muted class="back-video d-block w-100  ">
+          <source src="img/carpart.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!--COROUSEL TEXT-->
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <p class="d-block w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size: 15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          "TYRE!"</p>
+      </div>
+      <div class="carousel-item">
+        <p class="d-block  w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size: 15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          "Drive what you deserve."</p>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+  </div>
+  <br>
+
+  <!--COROUSEL TEXT-->
+  <h2 class=" text-center fw-bold" data-aos="zoom-in" style="color: green; font-family: 'Playfair Display', serif;">
+    TYRE! </h2>
+  <hr class="w-25 m-auto">
+
+  <nav>
+    <div class="container p-3 ">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-1"></div>
+        <div class="col-">
+          <div class="input-group  mt-">
+            <input type="text" placeholder="Search....." class="form-control" id="inp">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-outline-success" id="search" style="z-index:0;">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div class="row col-lg-12 mt-4 m-auto" id="panel">
+    <h1 class="display-3 text-center text-muted" id="not_find_any_thing"></h1>
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_1.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">HONDA</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">120</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">The car's contact points with the world, where rubber meets the
+            road.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-3 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2 card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_13.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">TOYOTA</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">110</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Your vehicles' feet, bearing the weight of your travels.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_14.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">BMW</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">235</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Rolling with resilience, thanks to the tires' fortitude.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_15.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">VOlVO</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">240</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">The tires, where durability meets the open road's challenge.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <div class=" row col-lg-12 mt-4 m-auto " id="panel">
+    <h1 class="display-3 text-center text-muted" id="not_find_any_thing"></h1>
+
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img " src="part img/Tyres/Tyre_2.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">HYUNDAI</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">170</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Your trusted traction providers, whatever the weather may bring.
+          </p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2 card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_5.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">SUZUKI</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">135</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Where rubber meets road, control meets the journey.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_3.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">KIA</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">250</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Rolling forward with precision, courtesy of the tires.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 my-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_6.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">TESLA</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">300</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Your road companions, navigating every twist and turn.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class=" row col-lg-12 mt-4 m-auto " id="panel">
+    <h1 class="display-3 text-center text-muted" id="not_find_any_thing"></h1>
+
+
+    <div class="col-md-6 col-lg-3 mt-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_7.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">FORD</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">225</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Tread patterns, the tire's fingerprints on the road.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mt-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_9.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">AUDI</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">338</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Tires, molding your ride's performance with each turn.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mt-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_10.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">BENTLEY</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">310</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Where rubber meets the road, adventure unfolds.
+          </p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mt-3 cards-wrap">
+      <div class="cards p-2  card-inner">
+        <img class="card-img-top img" src="part img/Tyres/Tyre_12.png" alt="">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">FERRARI</h5>
+            <div>
+              <span class="text-success">$</span><span class="text-success">572</span>
+            </div>
+          </div>
+          <p class="card-text" style="font-size:14px;">Your vehicles' feet, bearing the weight of your travels.</p>
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-outline-success text-dark fw-bold text-center pl-2 pr-2 cart_btn d-flex m-auto">Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ================================= Cart ===================================== -->
+
+  <div class="row pr-md-5 d-flex justify-content-center justify-content-md-end bg-info">
+    <div class="col-md-6 col-lg-4 mr-lg-5 border p-3 pb-4 rounded-lg bg-white ml-md-0" id="cart"
+      style="position: absolute;z-index: 1;top: 80px;overflow: auto;">
+
+      <div class="d-flex">
+        <div class="col-md-3">
+          <h5>Product</h5>
+        </div>
+        <div class="col-md-3 d-flex flex-wrap align-content-center">
+          <h5>Title</h5>
+        </div>
+        <div class="col-md-3 d-flex flex-wrap align-content-center">
+          <h5>Qty</h5>
+        </div>
+        <div class="col-md-2 d-flex flex-wrap align-content-center">
+          <h5>Price</h5>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+      <div id="order" style="overflow: auto;height: 250px;">
+
+      </div>
+      <div id="cart_footer">
+        <div class="text-center mt-4 "> <a href="payment.html" class="btn btn-outline-success buybtn  w-50">Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div><br>
+  <div class="text-center mb-5 mt-4 "> <a href="gallery.html" class="btn btn-outline-success buybtn"
+      style="border-radius: 15px;">VIEW GALLERY</a></div>
+
+  <!-- FOOTER -->
+  <footer class=" text-dark pb-4 bg-success">
+    <div class="container text-md-left">
+      <div class="row text-lg-left text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 text-white">
+
+          <p class="pt-2"
+            style="font-size: 12px; text-decoration: none; font-weight: 400;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <span class="fw-bold" style="font-size: 15px;">Office Address:</span> xyz canada
+          </p>
+          <p class="text-white"
+            style="font-size: 15px; text-decoration: none; font-weight: 400 ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <span class="fw-bold">Phone:</span> (021) 3172076682
+          </p>
+          <p class="text-white"
+            style="font-size: 15px; text-decoration: none; font-weight: 400; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <span class="fw-bold">Email : </span>www.carcrafted.com
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold text-white">Informations</p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Return
+              And Exchange Policy </a></p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Privacy
+              Policy </a></p>
+
+          <p> <a class="text-white" href="contactus.html"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter ;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact
+              Us</a></p>
+
+        </div>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold ">Newsletter</p>
+          <input class="ps-2 pe-5 pt-2 pb-2" style="border: none;" type="email" placeholder="Email address"> <br>
+          <button class="bg-dark text-light p-1 ps-2 pe-2 mt-3 mb-5 text-center"
+            style="font-size: 15px; font-weight: lighter;">Subscribe</button>
+          <p>
+            <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: none;"> <i
+                class="bi ms-2 bi-facebook" style="font-size: 15px;"> </i> </a> &nbsp; &nbsp;
+            <a href="https://www.instagram.com" target="_blank" style="color: white; text-decoration: none;"> <i
+                class="bi bi-instagram" style="font-size: 15px;"></i> </a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold">Informations</p>
+          <p> <a class="pt-2 text-white " href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Return
+              And Exchange Policy </a></p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Privacy
+              Policy </a></p>
+
+          <p> <a class="text-white " href="contactus.html"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter ;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact
+              Us</a></p>
+
+        </div>
+      </div>
+      <div class="text-center p-4 fw-lighter fw-bold" style="background-color:black ; color: green; font-size:13px">
+        © 2023 carcrafted.All Rights Reserved |
+      </div>
+  </footer>
+
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700, once: true
+  });
+</script>
+
+</html>

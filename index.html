@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Crafted</title>
+  <link rel="ICON" href="img/logo.png">
+   <!-- CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <!-- JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+   crossorigin="anonymous"></script>
+ <!-- ICON CDN -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+ <!-- aos animation -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <!-- Webpage Icon -->
+ <link rel="Icon" href="img/logo1.png">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <!-- icons CDN -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+ <!-- Font Awsome Icons CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+ <!-- Google fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+ <link
+   href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lora&family=Playfair+Display:ital,wght@0,500;1,500&family=Satisfy&display=swap"
+   rel="stylesheet">
+ <!-- link -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+ <script src="jquery.js"></script>
+ </script>
+
+</head>
+<style>
+   .container-fluid {
+    margin-left: 17%;
+  }
+
+  .dropdown-item:hover {
+    color: green;
+    position: relative;
+
+  }
+
+  .dropdown-item {
+    left: 3px;
+    transition: all .2s;
+  }
+
+
+  @media only screen and (min-width:1200px) {
+    .nav-item {
+      margin-left: 3px;
+    }
+
+    .nav-link:hover {
+      border-bottom: 3px solid rgb(13, 165, 13);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .active {
+      border-bottom: 3px solid rgb(13, 165, 13);
+      color: silver;
+    }
+  }
+
+  .nav-link {
+    transition: all 0.5s;
+    position: relative;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 143, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* index page cards */
+
+  .container {
+    margin-top: 10%;
+  }
+
+  .single-content {
+    position: relative;
+    transition: .3s;
+    box-shadow: 10px 20px 20px rgb(34, 32, 32)
+  }
+
+  .single-content .text-content,
+  .single-content:after {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+  }
+
+  .single-content:hover:after {
+    opacity: 0.8;
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+
+  .single-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    top: 45%;
+    opacity: 0;
+    z-index: 1;
+    transition: .3s;
+    text-align: center;
+    color: green;
+  }
+
+  .text-content h4 {
+    font-family: fantasy;
+    font-size: 35px;
+  }
+
+  .single-content:hover .text-content {
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: .3s;
+  }
+
+  .fa-phone:hover,
+  .fa-envelope:hover {
+    opacity: 0.2;
+  }
+
+  .img-fluid {
+    height: 140px;
+    width: 150px;
+  }
+
+  .car_img {
+    height: 260px !important;
+  }
+
+  .car_img1 {
+    height: 260px !important;
+  }
+
+  .a,
+  .a:hover {
+    color: rgb(23, 196, 23);
+  }
+
+  h3 {
+    position: relative;
+    text-decoration: none;
+  }
+
+  h3::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    top: 43px;
+    bottom: 0;
+    left: 0;
+    background-color: limegreen;
+    transform: scaleX(0.4);
+    transition: transform 0.3s ease;
+  }
+
+  h3:hover::before {
+    transform: scaleX(1);
+  }
+
+  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+</style>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark  ">
+    <div class="container-fluid  ">
+      <a href="index.html" class=""><img src="img/logo.png" class="" height="70px" width="120%" alt=""></a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-3" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-5">
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold active" style="color: silver;" href="index.html" id="navbarDropdownMenuLink">
+              Home
+            </a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown ms-3 fw-bold " style="color: silver;" href="#" id="navbarDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item fw-bold" href="backlight.html">Back Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="foglight.html">Fog Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="headlight.html">Head Lights</a></li>
+              <li><a class="dropdown-item fw-bold" href="backtrunk.html">Back Trunk</a></li>
+              <li><a class="dropdown-item fw-bold" href="seat.html">Seat</a></li>
+              <li><a class="dropdown-item fw-bold" href="door.html">Door</a></li>
+              <li><a class="dropdown-item fw-bold" href="sidemirror.html"> Side Mirror</a></li>
+              <li><a class="dropdown-item fw-bold" href="tyre.html"> Tyre</a></li>
+              <li><a class="dropdown-item fw-bold" href="rim.html">Rim</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="service.html">
+              Service
+            </a>
+          </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="Gallery.html">
+              Gallery
+            </a>
+
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link ms-3 fw-bold  " style="color: silver;" href="AboutUs.html">
+              About Us
+            </a>
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link ms-3 fw-bold" style="color: silver;" href="contactus.html">
+              Contact Us
+            </a>
+
+          </li>
+
+          <div class="col-md- d-flex justify-content-start">
+            <div class="pt-2 pl-0 pb-0 pr-0">
+              <i class="fas fa-shopping-cart fa-1x ml-md-5"></i>
+            </div>
+            <span class="badge badge-success mt-0 align-self-start" id="cart_item_count"
+              style="margin-left: -25px;margin-top: -5px;">0</span>
+          </div>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link ms-4 fw-bold" style="color: silver;" href="signup.html">
+              Sign up
+            </a>
+          </li>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--CAROUSEL video-->
+  <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active m-none">
+        <video autoplay loop muted class="back-video d-block w-100  ">
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- cover pic -->
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/offer cover.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+
+  <!--COROUSEL TEXT-->
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <p class="d-block w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size: 15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          "CAR CRAFTED!"</p>
+      </div>
+      <div class="carousel-item">
+        <p class="d-block  w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size:  15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          "Quality parts for quality driving."</p>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+  </div>
+
+  <!--COROUSEL TEXT-->
+
+
+  <h1 class="text-center font-weight-bold p-1" style="font-family: 'Vollkorn', serif; color: green;" data-aos="zoom-in">
+    ALL PARTS ARE AVAILABLE
+  </h1>
+  <hr>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="single-content">
+          <a href="headlight.html" class="a">
+            <img src="img/headlightcover.jpeg" class="car_img">
+            <div class="text-content">
+              <h4 style="color: white;">Head Lights</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="single-content">
+        <a href="backlight.html" class="a">
+          <img src="img/backlight cover.jpeg" class="car_img">
+          <div class="text-content">
+            <h4 style="color: white;">Back Lights</h4>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="single-content">
+      <a href="foglight.html" class="a">
+        <img src="img/fog light cover.jpeg" class="car_img">
+        <div class="text-content">
+          <h4 style="color: white;">Fog Lights</h4>
+      </a>
+
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="single-content">
+          <a href="sidemirror.html" class="a">
+            <img src="img/sidemirror cover.jpeg" class="car_img">
+            <div class="text-content">
+              <h4 style="color: white;">Side Mirror</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="single-content">
+        <a href="backtrunk.html" class="a">
+          <img src="img/cartrunk cover.jpeg" class="car_img">
+          <div class="text-content">
+            <h4 style="color: white;">Back Trunk</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="single-content">
+      <a href="rim.html" class="a">
+        <img src="img/rim cover.jpeg" class="car_img">
+        <div class="text-content">
+          <h4 style="color: white;">Rim</h4>
+      </a>
+
+    </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="single-content">
+          <a href="tyre.html" class="a">
+            <img src="img/tyre cover.jpeg" class="car_img">
+            <div class="text-content">
+              <h4 style="color: white;">Tyre</h4>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="single-content">
+        <a href="seat.html" class="a">
+          <img src="img/carseat cover.jpeg" class="car_img">
+          <div class="text-content">
+            <h4 style="color: white;">Seat</h4>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <div class=" col-md-4 col-sm-6">
+    <div class="single-content">
+      <img src="img/door cover.jpeg" class="car_img">
+      <div class="text-content">
+        <a href="door.html" class="a">
+          <h4 style="color: white;">Door</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <!--COROUSEL TEXT-->
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <p class="d-block w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size: 15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          OUR PARTNERS ! </p>
+      </div>
+      <div class="carousel-item">
+        <p class="d-block  w-100 text-center text-dark pt-2 pb-2 bg-success"
+          style="font-size:  15px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          Choose your Brand & Your ride, your way!
+        </p>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+  </div>
+
+  <!--COROUSEL TEXT-->
+
+  <!-- Slider Start -->
+
+  <section class="my-4">
+    <div class="container my-4">
+      <h2 class="mt-5 text-center fw-bold" data-aos="zoom-in"
+        style="color: green; font-family: 'Playfair Display', serif;"> OUR PARTNERS! </h2>
+      <br>
+      <div class="row slider mt-3">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner1.png" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner2.png" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner3.png" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner4.jpg" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner5.png" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner6.png" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner7.jpg" class="img-fluid m-auto" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <img src="img/patner8.png" class="img-fluid m-auto" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider End -->
+
+
+  <!-- FOOTER -->
+  <footer class=" text-dark pb-4 bg-success">
+    <div class="container text-md-left">
+      <div class="row text-lg-left text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 text-white">
+
+          <p class="pt-2"
+            style="font-size: 12px; text-decoration: none; font-weight: 400;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <span class="fw-bold" style="font-size: 15px;">Office Address:</span> xyz canada
+          </p>
+          <p class="text-white"
+            style="font-size: 15px; text-decoration: none; font-weight: 400 ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <span class="fw-bold">Phone:</span> (021) 3172076682
+          </p>
+          <p class="text-white"
+            style="font-size: 15px; text-decoration: none; font-weight: 400; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <span class="fw-bold">Email : </span>www.carcrafted.com
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold text-white">Informations</p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Return
+              And Exchange Policy </a></p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Privacy
+              Policy </a></p>
+
+          <p> <a class="text-white" href="contactus.html"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter ;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact
+              Us</a></p>
+
+        </div>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold ">Newsletter</p>
+          <input class="ps-2 pe-5 pt-2 pb-2" style="border: none;" type="email" placeholder="Email address"> <br>
+          <button class="bg-dark text-light p-1 ps-2 pe-2 mt-3 mb-5 text-center"
+            style="font-size: 15px; font-weight: lighter;">Subscribe</button>
+          <p>
+            <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: none;"> <i
+                class="bi ms-2 bi-facebook" style="font-size: 15px;"> </i> </a> &nbsp; &nbsp;
+            <a href="https://www.instagram.com" target="_blank" style="color: white; text-decoration: none;"> <i
+                class="bi bi-instagram" style="font-size: 15px;"></i> </a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-white">
+          <p class=" mb-4 fw-bold">Informations</p>
+          <p> <a class="pt-2 text-white " href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Return
+              And Exchange Policy </a></p>
+          <p> <a class="pt-2 text-white" href="#"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Privacy
+              Policy </a></p>
+
+          <p> <a class="text-white " href="contactus.html"
+              style="font-size: 13px; text-decoration: none; font-weight: lighter ;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact
+              Us</a></p>
+
+        </div>
+      </div>
+      <div class="text-center p-4 fw-lighter fw-bold" style="background-color:black ; color: green; font-size:13px">
+        © 2023 carcrafted.All Rights Reserved |
+      </div>
+  </footer>
+
+  <!-- Jquery CDN,s for slider -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 800,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700, once: true
+    });
+  </script>
+
+</html>
